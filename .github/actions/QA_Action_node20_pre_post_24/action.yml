@@ -1,0 +1,14 @@
+name: 'QA_Action_node20_pre_post_24'
+description: 'Node.js action with pre and post lifecycle hooks'
+inputs:
+  token:
+    description: 'GitHub token'
+    required: true
+outputs:
+  status:
+    description: 'Final status'
+runs:
+  using: node20
+  main: 'index.js'
+  pre: 'pre.js'
+  post: 'post.js'
