@@ -1,0 +1,27 @@
+name: 'QA_Action_docker_args_73'
+description: 'Docker action with multiple input args'
+inputs:
+  host:
+    description: 'Target host'
+    required: true
+  port:
+    description: 'Target port'
+    required: false
+    default: '443'
+  timeout:
+    description: 'Connection timeout in seconds'
+    required: false
+    default: '30'
+outputs:
+  connected:
+    description: 'Whether connection succeeded'
+branding:
+  icon: 'wifi'
+  color: 'orange'
+runs:
+  using: docker
+  image: 'docker://curlimages/curl:latest'
+  args:
+    - "${{ inputs.host }}"
+    - "${{ inputs.port }}"
+    - "${{ inputs.timeout }}"
