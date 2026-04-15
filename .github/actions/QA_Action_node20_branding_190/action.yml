@@ -1,0 +1,16 @@
+name: 'QA_Action_node20_branding_190'
+description: 'Node.js action with branding'
+inputs:
+  workspace:
+    description: 'Workspace path'
+    required: false
+    default: '.'
+outputs:
+  files:
+    description: 'Files processed'
+branding:
+  icon: 'package'
+  color: 'green'
+runs:
+  using: node20
+  main: 'index.js'
