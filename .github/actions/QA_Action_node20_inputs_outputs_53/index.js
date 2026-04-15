@@ -1,0 +1,1 @@
+const core = require('@actions/core'); const msg = core.getInput('message'); core.info(msg); core.setOutput('logged', 'true'); core.setOutput('count', '1');
