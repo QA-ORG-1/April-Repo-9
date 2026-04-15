@@ -1,0 +1,20 @@
+name: 'QA_Action_composite_multistep_36'
+description: 'Composite action with multiple shell steps'
+inputs:
+  repo:
+    description: 'Repository name'
+    required: true
+  branch:
+    description: 'Branch to check out'
+    required: false
+    default: 'main'
+outputs:
+  sha:
+    description: 'Checked out commit SHA'
+    value: "${{ steps.get_sha.outputs.sha }}"
+runs:
+  using: composite
+  steps:
+    - id: run
+      run: echo 'step1' && echo 'step2' && echo 'step3'
+      shell: bash
