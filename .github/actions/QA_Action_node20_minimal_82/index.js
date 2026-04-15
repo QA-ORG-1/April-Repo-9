@@ -1,0 +1,1 @@
+const core = require('@actions/core'); core.info('QA node20 minimal');
