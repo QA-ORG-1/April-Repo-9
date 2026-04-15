@@ -1,0 +1,5 @@
+name: 'QA_Action_node20_minimal_172'
+description: 'Minimal Node.js action'
+runs:
+  using: node20
+  main: 'index.js'
