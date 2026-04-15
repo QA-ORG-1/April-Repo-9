@@ -1,0 +1,20 @@
+name: 'QA_Action_composite_branding_155'
+description: 'Composite action with branding metadata'
+inputs:
+  target:
+    description: 'Deployment target'
+    required: false
+    default: 'staging'
+outputs:
+  deployed:
+    description: 'Deployment result'
+    value: "true"
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
+runs:
+  using: composite
+  steps:
+    - id: run
+      run: echo 'Deploying to ${{ inputs.target }}'
+      shell: bash
