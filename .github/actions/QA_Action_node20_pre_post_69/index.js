@@ -1,0 +1,1 @@
+const core = require('@actions/core'); core.setOutput('status', 'done');
