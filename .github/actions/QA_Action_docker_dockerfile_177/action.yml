@@ -1,0 +1,10 @@
+name: 'QA_Action_docker_dockerfile_177'
+description: 'Docker action with inline Dockerfile reference'
+inputs:
+  entrypoint:
+    description: 'Script entrypoint'
+    required: false
+    default: 'entrypoint.sh'
+runs:
+  using: docker
+  image: 'Dockerfile'
