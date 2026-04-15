@@ -1,0 +1,20 @@
+name: 'QA_Action_composite_special_179'
+description: 'Composite action with special chars & unicode: éàü <test> "quoted" 'single' \backslash'
+inputs:
+  value:
+    description: 'Input with special chars !@#$%^&*()'
+    required: false
+    default: 'default_éàü'
+outputs:
+  result:
+    description: 'Output with unicode 你好'
+    value: "ok"
+branding:
+  icon: 'star'
+  color: 'purple'
+runs:
+  using: composite
+  steps:
+    - id: run
+      run: echo 'Special chars test: !@#$%^&*()'
+      shell: bash
